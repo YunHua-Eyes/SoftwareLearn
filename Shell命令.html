@@ -1,0 +1,1360 @@
+<!DOCTYPE html><html><head>
+      <title>Shell&#x547D;&#x4EE4;</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\admin\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <div class="md-toc">
+<details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x6587;&#x4EF6;&#x7BA1;&#x7406;font" class="md-toc-link"><p><font color="006600">&#x6587;&#x4EF6;&#x7BA1;&#x7406;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddcat-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">cat &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddchmod-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">chmod &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddchown-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">chown &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddcmp-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">cmp &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000dddiff-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">diff &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddfile-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">file &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddfind-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">find &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddln-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">ln &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddless-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">less &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddmore-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">more &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddmv-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">mv &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddrm-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">rm &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddtouch-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">touch &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddwhich-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">which &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddcp-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">cp &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddwhereis-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">whereis &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddawk-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">awk &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x78C1;&#x76D8;&#x7BA1;&#x7406;font" class="md-toc-link"><p><font color="006600">&#x78C1;&#x76D8;&#x7BA1;&#x7406;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddcd-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">cd &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000dddf-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">df &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000dddu-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">du &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddmkdir-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">mkdir &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddpwd-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">pwd &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddstat-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">stat &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddls-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">ls &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x7F51;&#x7EDC;&#x901A;&#x8BAF;font" class="md-toc-link"><p><font color="006600">&#x7F51;&#x7EDC;&#x901A;&#x8BAF;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddifconfig-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">ifconfig &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddnetstat-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">netstat &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddping-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">ping &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddtelnet-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">telnet &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;font" class="md-toc-link"><p><font color="006600">&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000dddate-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">date &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddexit-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">exit &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddsleep-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">sleep &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddkill-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">kill &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddps-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">ps &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddreboot-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">reboot &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddtop-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">top &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddsudo-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">sudo &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddshutdown-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">shutdown &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddwho-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">who &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddsu-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">su &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddfree-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">free &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddw-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">w &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddcu-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">cu &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddtelnet-&#x547D;&#x4EE4;font-1" class="md-toc-link">
+            <p><font color="#0000dd">telnet &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;font" class="md-toc-link"><p><font color="006600">&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddclock-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">clock &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddcrontab-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">crontab &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddset-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">set &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddexport-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">export &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddenable-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">enable &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x5907;&#x4EFD;&#x538B;&#x7F29;font" class="md-toc-link"><p><font color="006600">&#x5907;&#x4EFD;&#x538B;&#x7F29;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddzip-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">zip &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddunzip-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">unzip &#x547D;&#x4EE4;</font></p>
+
+          </a></div><div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddtar-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="#0000dd">tar &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    <details style="padding:0;;padding-left:0px;" open>
+        <summary class="md-toc-link-wrapper">
+          <a href="#font-color006600&#x5176;&#x4ED6;&#x547D;&#x4EE4;font" class="md-toc-link"><p><font color="006600">&#x5176;&#x4ED6;&#x547D;&#x4EE4;</font></p>
+</a>
+          </summary>
+        <div>
+          <div class="md-toc-link-wrapper" style="padding:0;;display:list-item;list-style:square;margin-left:42px">
+          <a href="#font-color0000ddtail-&#x547D;&#x4EE4;font" class="md-toc-link">
+            <p><font color="0000dd">tail &#x547D;&#x4EE4;</font></p>
+
+          </a></div>
+        </div>
+      </details>
+    
+</div>
+<h1 class="mume-header" id="font-color006600%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86font"><font color="006600">&#x6587;&#x4EF6;&#x7BA1;&#x7406;</font></h1>
+
+<h2 class="mume-header" id="font-color0000ddcat-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">cat &#x547D;&#x4EE4;</font></h2>
+
+<p><strong>&#x6587;&#x4EF6;&#xFF1A;/var/log/cron-2023060</strong></p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">cat</span> /var/log/cron-2023060
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">Jun  <span class="token number">8</span> <span class="token number">16</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">126323</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run-parts /etc/cron.hourly<span class="token punctuation">)</span>
+Jun  <span class="token number">8</span> <span class="token number">16</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">126323</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> starting 0anacron
+Jun  <span class="token number">8</span> <span class="token number">16</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">126323</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> finished 0anacron
+Jun  <span class="token number">8</span> <span class="token number">17</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">127075</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run-parts /etc/cron.hourly<span class="token punctuation">)</span>
+Jun  <span class="token number">8</span> <span class="token number">17</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">127075</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> starting 0anacron
+Jun  <span class="token number">8</span> <span class="token number">17</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">127075</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> finished 0anacron
+Jun  <span class="token number">8</span> <span class="token number">18</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">127358</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run-parts /etc/cron.hourly<span class="token punctuation">)</span>
+Jun  <span class="token number">8</span> <span class="token number">18</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">127358</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> starting 0anacron
+Jun  <span class="token number">8</span> <span class="token number">18</span>:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">127358</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> finished 0anacron
+</pre><p>&#x7531; 1 &#x5F00;&#x59CB;&#x5BF9;&#x6240;&#x6709;&#x8F93;&#x51FA;&#x7684;&#x884C;&#x6570;&#x7F16;&#x53F7;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">cat</span> -n /var/log/cron-2023060
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token number">605</span>  Jun  <span class="token number">4</span> 02:34:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">103074</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>/usr/bin/systemctl --quiet restart update-motd<span class="token punctuation">)</span>
+<span class="token number">606</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run-parts /etc/cron.hourly<span class="token punctuation">)</span>
+<span class="token number">607</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> starting 0anacron
+<span class="token number">608</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Anacron started on <span class="token number">2023</span>-06-04
+<span class="token number">609</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Will run job <span class="token variable"><span class="token variable">`</span>cron.daily&apos; <span class="token keyword keyword-in">in</span> <span class="token number">30</span> min.
+<span class="token number">610</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Will run job <span class="token variable">`</span></span>cron.weekly&apos; <span class="token keyword keyword-in">in</span> <span class="token number">50</span> min.
+<span class="token number">611</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Jobs will be executed sequentially
+<span class="token number">612</span>  Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> finished 0anacron
+</pre><p>&#x628A; textfile1 &#x7684;&#x6587;&#x6863;&#x5185;&#x5BB9;&#x52A0;&#x4E0A;&#x884C;&#x53F7;&#x540E;&#x8F93;&#x5165; textfile2 &#x8FD9;&#x4E2A;&#x6587;&#x6863;&#x91CC;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">cat</span> /var/log/cron-20230604 <span class="token operator">&gt;</span> /root/cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">56</span>
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+-rwxr-xr-x <span class="token number">1</span> root root     <span class="token number">0</span> Jun  <span class="token number">8</span> <span class="token number">16</span>:11 log.txt
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># cat cron-temp</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">102975</span><span class="token punctuation">]</span>: Anacron started on <span class="token number">2023</span>-06-04
+Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">102975</span><span class="token punctuation">]</span>: Normal <span class="token builtin class-name">exit</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token function">jobs</span> run<span class="token punctuation">)</span>
+Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">102966</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> finished 0anacron
+Jun  <span class="token number">4</span> 02:34:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">103074</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>/usr/bin/systemctl --quiet restart update-motd<span class="token punctuation">)</span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run-parts /etc/cron.hourly<span class="token punctuation">)</span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> starting 0anacron
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Anacron started on <span class="token number">2023</span>-06-04
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Will run job <span class="token variable"><span class="token variable">`</span>cron.daily&apos; <span class="token keyword keyword-in">in</span> <span class="token number">30</span> min.
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Will run job <span class="token variable">`</span></span>cron.weekly&apos; <span class="token keyword keyword-in">in</span> <span class="token number">50</span> min.
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Jobs will be executed sequentially
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.hourly<span class="token punctuation">)</span> finished 0anacron
+</pre><h2 class="mume-header" id="font-color0000ddchmod-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">chmod &#x547D;&#x4EE4;</font></h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x6743;&#x9650;</th>
+<th style="text-align:right">rwx</th>
+<th style="text-align:center">&#x4E8C;&#x8FDB;&#x5236;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:right">&#x53EA;&#x8BFB;</td>
+<td style="text-align:center">r-- 100</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:right">&#x53EA;&#x5199;</td>
+<td style="text-align:center">-w-	010</td>
+</tr>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:right">&#x53EA;&#x6267;&#x884C;</td>
+<td style="text-align:center">--x 001</td>
+</tr>
+</tbody>
+</table>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">chmod</span> <span class="token number">421</span> cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">56</span>
+-r---w---x <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">chmod</span> <span class="token number">763</span> cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">56</span>
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+</pre><h2 class="mume-header" id="font-color0000ddchown-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">chown &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x5C06;&#x6587;&#x4EF6;&#x7684;&#x62E5;&#x6709;&#x8005;&#x8BBE;&#x4E3A; root&#xFF0C;&#x7FA4;&#x4F53;&#x7684;&#x4F7F;&#x7528;&#x8005; root</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">chown</span> root:root cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">56</span>
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">chown</span> -R root:root *
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">56</span>
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+</pre><h2 class="mume-header" id="font-color0000ddcmp-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">cmp &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x6BD4;&#x8F83; prog.o.bak &#x548C; prog.o&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x76F8;&#x540C;&#xFF0C;&#x5219;&#x4E0D;&#x663E;&#x793A;&#x6D88;&#x606F;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">cmp</span> cron-temp /var/log/cron-20230604
+</pre><p>&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x540C;&#xFF0C;&#x5219;&#x663E;&#x793A;&#x7B2C;&#x4E00;&#x4E2A;&#x4E0D;&#x540C;&#x7684;&#x4F4D;&#x7F6E;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># cmp cron-temp /var/log/cron-20230528 </span>
+cron-temp /var/log/cron-20230528 differ: byte <span class="token number">1</span>, line <span class="token number">1</span>
+</pre><h2 class="mume-header" id="font-color0000dddiff-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">diff &#x547D;&#x4EE4;</font></h2>
+
+<p>-H &#x6216; --speed-large-files &#x3000;&#x6BD4;&#x8F83;&#x5927;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x53EF;&#x52A0;&#x5FEB;&#x901F;&#x5EA6;&#x3002;</p>
+<p>-y &#x6216; --side-by-side &#x3000;&#x4EE5;&#x5E76;&#x5217;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x7684;&#x5F02;&#x540C;&#x4E4B;&#x5904;&#x3002;<br>
+-W&lt;&#x5BBD;&#x5EA6;&gt; &#x6216; --width&lt;&#x5BBD;&#x5EA6;&gt; &#x3000;&#x5728;&#x4F7F;&#x7528;-y&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x6307;&#x5B9A;&#x680F;&#x5BBD;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">diff</span> cron-temp /var/log/cron-20230528 -H -y -W <span class="token number">150</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">102966</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.    <span class="token operator">|</span>     May <span class="token number">28</span> 02:34:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">70131</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>/usr
+Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">102975</span><span class="token punctuation">]</span>: Anacron start    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">70248</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run-
+Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">102975</span><span class="token punctuation">]</span>: Normal <span class="token builtin class-name">exit</span> <span class="token punctuation">(</span>    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">70248</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.h
+Jun  <span class="token number">4</span> 02:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">102966</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">70257</span><span class="token punctuation">]</span>: Anacron starte
+Jun  <span class="token number">4</span> 02:34:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">103074</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>/us    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">70257</span><span class="token punctuation">]</span>: Will run job <span class="token variable"><span class="token variable">`</span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ CROND<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>root<span class="token punctuation">)</span> CMD <span class="token punctuation">(</span>run    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">70257</span><span class="token punctuation">]</span>: Will run job <span class="token variable">`</span></span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">70257</span><span class="token punctuation">]</span>: Jobs will be e
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Anacron start    <span class="token operator">|</span>     May <span class="token number">28</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">70248</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.h
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Will run job     <span class="token operator">&lt;</span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Will run job     <span class="token operator">&lt;</span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ anacron<span class="token punctuation">[</span><span class="token number">103190</span><span class="token punctuation">]</span>: Jobs will be     <span class="token operator">&lt;</span>
+Jun  <span class="token number">4</span> 03:01:01 iZbp10iy3yejxoxq8qhlpiZ run-parts<span class="token punctuation">[</span><span class="token number">103181</span><span class="token punctuation">]</span>: <span class="token punctuation">(</span>/etc/cron.    <span class="token operator">&lt;</span>
+</pre><h2 class="mume-header" id="font-color0000ddfile-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">file &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># file cron-temp</span>
+cron-temp: ASCII text
+</pre><p>&#x591A;&#x4E2A;&#x6587;&#x4EF6;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># file cron-temp /var/log/cron</span>
+cron-temp:     ASCII text
+/var/log/cron: ASCII text
+</pre><p>-c &#x8BE6;&#x7EC6;&#x663E;&#x793A;&#x6307;&#x4EE4;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#xFF0C;&#x4FBF;&#x4E8E;&#x6392;&#x9519;&#x6216;&#x5206;&#x6790;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x60C5;&#x5F62;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># file -c cron-temp</span>
+cont    offset  <span class="token builtin class-name">type</span>    opcode  mask    value   desc
+</pre><h2 class="mume-header" id="font-color0000ddfind-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">find &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># find . -name cron-temp</span>
+./cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># find /var/log/ -name &quot;cron*&quot;</span>
+/var/log/cron-20230604
+/var/log/cron-20230528
+/var/log/cron
+</pre><p>&#x67E5;&#x627E; /home &#x76EE;&#x5F55;&#x4E0B;&#x5927;&#x4E8E; 1MB &#x7684;&#x6587;&#x4EF6;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># find /var/log/ -size +1M</span>
+/var/log/journal/b6ab5170290e430b872c890ce386d1eb/system.journal
+/var/log/journal/b6ab5170290e430b872c890ce386d1eb/system@00000000000000000000000000000000-0000000000000f21-0005f4a386cdfa09.journal
+<span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment">#</span>
+</pre><p>&#x67E5;&#x627E; /var/log &#x76EE;&#x5F55;&#x4E0B;&#x5728; 7 &#x5929;&#x524D;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># find /var/log/ -mtime 7</span>
+/var/log/sa/sar31
+/var/log/sa/sa31
+</pre><p>&#x5C06;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x53CA;&#x5176;&#x5B50;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6700;&#x8FD1; 7 &#x5929;&#x524D;&#x66F4;&#x65B0;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x51FA;&#xFF0C;&#x4E0D;&#x591A;&#x4E0D;&#x5C11;&#x6B63;&#x597D; 7 &#x5929;&#x524D;&#x7684;:</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># find /var/log/ -ctime 7</span>
+/var/log/sa/sar31
+/var/log/sa/sa31
+/var/log/btmp-20230601
+</pre><p>&#x5C06;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x53CA;&#x5176;&#x5B50;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709; 7 &#x5929;&#x524D; &#x53CA;&#x66F4;&#x65E9;&#x66F4;&#x65B0;&#x8FC7;&#x7684;&#x6587;&#x4EF6;&#x5217;&#x51FA;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">find</span> /var/log/ -ctime +7
+</pre><h2 class="mume-header" id="font-color0000ddln-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">ln &#x547D;&#x4EE4;</font></h2>
+
+<p>-s &#x8F6F;&#x94FE;&#x63A5;(&#x7B26;&#x53F7;&#x94FE;&#x63A5;)</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ln</span> -s /var/log/cron-20230528 cron-20230528
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">56</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+</pre><p>&#x786C;&#x94FE;&#x63A5;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ln</span> /var/log/cron-20230528 cron-20230528.txt
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">116</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root <span class="token number">56797</span> May <span class="token number">28</span> 03:01 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron-temp
+</pre><h2 class="mume-header" id="font-color0000ddless-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">less &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x7A7A;&#x683C;&#x952E; &#x6EDA;&#x52A8;&#x4E00;&#x9875;<br>
+&#x56DE;&#x8F66;&#x952E; &#x6EDA;&#x52A8;&#x4E00;&#x884C;<br>
+[pagedown]&#xFF1A; &#x5411;&#x4E0B;&#x7FFB;&#x52A8;&#x4E00;&#x9875;<br>
+[pageup]&#xFF1A; &#x5411;&#x4E0A;&#x7FFB;&#x52A8;&#x4E00;&#x9875;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">less</span> cron-temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ps</span> -ef <span class="token operator">|</span><span class="token function">less</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">history</span> <span class="token operator">|</span> <span class="token function">less</span>
+</pre><h2 class="mume-header" id="font-color0000ddmore-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">more &#x547D;&#x4EE4;</font></h2>
+
+<p>Enter &#x5411;&#x4E0B;n&#x884C;&#xFF0C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x3002;&#x9ED8;&#x8BA4;&#x4E3A;1&#x884C;<br>
+Ctrl+F &#x5411;&#x4E0B;&#x6EDA;&#x52A8;&#x4E00;&#x5C4F;<br>
+&#x7A7A;&#x683C;&#x952E; &#x5411;&#x4E0B;&#x6EDA;&#x52A8;&#x4E00;&#x5C4F;<br>
+Ctrl+B &#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x5C4F;<br>
+= &#x8F93;&#x51FA;&#x5F53;&#x524D;&#x884C;&#x7684;&#x884C;&#x53F7;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">more</span> cron-temp
+</pre><h2 class="mume-header" id="font-color0000ddmv-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">mv &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">mv</span> cron-temp cron_temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">116</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root <span class="token number">56797</span> May <span class="token number">28</span> 03:01 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">8</span> <span class="token number">19</span>:14 cron_temp
+</pre><h2 class="mume-header" id="font-color0000ddrm-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">rm &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">rm</span>  -rf   test.txt
+</pre><h2 class="mume-header" id="font-color0000ddtouch-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">touch &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x76EE;&#x5F55;&#x7684;&#x65F6;&#x95F4;&#x5C5E;&#x6027;&#xFF0C;&#x5305;&#x62EC;&#x5B58;&#x53D6;&#x65F6;&#x95F4;&#x548C;&#x66F4;&#x6539;&#x65F6;&#x95F4;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">touch</span> cron_temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">116</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root <span class="token number">56797</span> May <span class="token number">28</span> 03:01 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron_temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">touch</span> cron-20230528.txt
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">116</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron_temp
+</pre><p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x7684;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x5C06;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x7A7A;&#x767D;&#x6587;&#x4EF6;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">touch</span> text.txt
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">116</span>
+lrwxrwxrwx <span class="token number">1</span> root root    <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron_temp
+-rw-r--r-- <span class="token number">1</span> root root     <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+</pre><h2 class="mume-header" id="font-color0000ddwhich-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">which &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x67E5;&#x627E;&#x6587;&#x4EF6;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># which cron_temp</span>
+/usr/bin/which: no cron_temp <span class="token keyword keyword-in">in</span> <span class="token punctuation">(</span>/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin<span class="token punctuation">)</span>
+</pre><p>&#x67E5;&#x770B;&#x6307;&#x4EE4;&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># which bash</span>
+/usr/bin/bash
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># which docker</span>
+/usr/bin/docker
+</pre><h2 class="mume-header" id="font-color0000ddcp-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">cp &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">cp</span> /var/log/dnf.librepo.log dnf.librepo.log
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">444</span>
+lrwxrwxrwx <span class="token number">1</span> root root     <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root  <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root  <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron_temp
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">333511</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 dnf.librepo.log
+-rw-r--r-- <span class="token number">1</span> root root      <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+</pre><p>-r&#xFF1A;&#x82E5;&#x7ED9;&#x51FA;&#x7684;&#x6E90;&#x6587;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x65F6;&#x5C06;&#x590D;&#x5236;&#x8BE5;&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x7684;&#x5B50;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">cp</span> -r /var/log log
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">448</span>
+lrwxrwxrwx <span class="token number">1</span> root root     <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root  <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root  <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron_temp
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">333511</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 dnf.librepo.log
+drwxr-xr-x <span class="token number">9</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 log
+-rw-r--r-- <span class="token number">1</span> root root      <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+</pre><h2 class="mume-header" id="font-color0000ddwhereis-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">whereis &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># whereis bash</span>
+bash: /usr/bin/bash /usr/share/man/man1/bash.1.gz /usr/share/info/bash.info.gz
+</pre><h2 class="mume-header" id="font-color0000ddawk-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">awk &#x547D;&#x4EE4;</font></h2>
+
+<p>&#xB7;&#xB7;&#xB7;</p>
+<h1 class="mume-header" id="font-color006600%E7%A3%81%E7%9B%98%E7%AE%A1%E7%90%86font"><font color="006600">&#x78C1;&#x76D8;&#x7BA1;&#x7406;</font></h1>
+
+<h2 class="mume-header" id="font-color0000ddcd-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">cd &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># cd /var/log/</span>
+<span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ log<span class="token punctuation">]</span><span class="token comment"># </span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ log<span class="token punctuation">]</span><span class="token comment"># cd -</span>
+/root
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># cd ..</span>
+<span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ /<span class="token punctuation">]</span><span class="token comment"># </span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ /<span class="token punctuation">]</span><span class="token comment"># cd root/</span>
+<span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># </span>
+</pre><h2 class="mume-header" id="font-color0000dddf-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">df &#x547D;&#x4EE4;</font></h2>
+
+<p>-h &#x9009;&#x9879;&#xFF0C;&#x901A;&#x8FC7;&#x5B83;&#x53EF;&#x4EE5;&#x4EA7;&#x751F;&#x53EF;&#x8BFB;&#x7684;&#x683C;&#x5F0F;df&#x547D;&#x4EE4;&#x7684;&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">df</span> -h
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">Filesystem      Size  Used Avail Use% Mounted on
+devtmpfs        966M     <span class="token number">0</span>  966M   <span class="token number">0</span>% /dev
+tmpfs           984M     <span class="token number">0</span>  984M   <span class="token number">0</span>% /dev/shm
+tmpfs           984M  584K  984M   <span class="token number">1</span>% /run
+tmpfs           984M     <span class="token number">0</span>  984M   <span class="token number">0</span>% /sys/fs/cgroup
+/dev/vda2        40G  <span class="token number">5</span>.1G   33G  <span class="token number">14</span>% /
+/dev/vda1       200M  <span class="token number">5</span>.8M  195M   <span class="token number">3</span>% /boot/efi
+overlay          40G  <span class="token number">5</span>.1G   33G  <span class="token number">14</span>% /var/lib/docker/overlay2/8d2796648cb6bd0971e1326f4e430556ba2033f8da86f56971bebcbcce59481e/merged
+overlay          40G  <span class="token number">5</span>.1G   33G  <span class="token number">14</span>% /var/lib/docker/overlay2/a40ec70f5462861634027862f04a9e55d8ee636188ab4ba92dda6ac0d33d947f/merged
+tmpfs           197M     <span class="token number">0</span>  197M   <span class="token number">0</span>% /run/user/0
+</pre><h2 class="mume-header" id="font-color0000dddu-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">du &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">du</span> /root
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token number">4</span>       /root/.ssh
+<span class="token number">11392</span>   /root/log/sa
+<span class="token number">8</span>       /root/log/tuned
+<span class="token number">4</span>       /root/log/chrony
+<span class="token number">4</span>       /root/log/private
+<span class="token number">4</span>       /root/log/anaconda
+<span class="token number">28</span>      /root/log/audit
+<span class="token number">40964</span>   /root/log/journal/b6ab5170290e430b872c890ce386d1eb
+<span class="token number">40968</span>   /root/log/journal
+<span class="token number">56404</span>   /root/log
+<span class="token number">4</span>       /root/.config/procps
+<span class="token number">8</span>       /root/.config
+<span class="token number">8</span>       /root/.pip
+<span class="token number">56916</span>   /root
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">du</span> -h /root
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token number">4</span>.0K    /root/.ssh
+12M     /root/log/sa
+<span class="token number">8</span>.0K    /root/log/tuned
+<span class="token number">4</span>.0K    /root/log/chrony
+<span class="token number">4</span>.0K    /root/log/private
+<span class="token number">4</span>.0K    /root/log/anaconda
+28K     /root/log/audit
+41M     /root/log/journal/b6ab5170290e430b872c890ce386d1eb
+41M     /root/log/journal
+56M     /root/log
+<span class="token number">4</span>.0K    /root/.config/procps
+<span class="token number">8</span>.0K    /root/.config
+<span class="token number">8</span>.0K    /root/.pip
+56M     /root
+</pre><h2 class="mume-header" id="font-color0000ddmkdir-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">mkdir &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">mkdir</span> runtest
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll</span>
+total <span class="token number">452</span>
+lrwxrwxrwx <span class="token number">1</span> root root     <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root  <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root  <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron_temp
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">333511</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 dnf.librepo.log
+drwxr-xr-x <span class="token number">9</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 log
+drwxr-xr-x <span class="token number">2</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:08 runtest
+-rw-r--r-- <span class="token number">1</span> root root      <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+</pre><p>-p &#x786E;&#x4FDD;&#x76EE;&#x5F55;&#x540D;&#x79F0;&#x5B58;&#x5728;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x5C31;&#x5EFA;&#x4E00;&#x4E2A;&#xFF08;&#x6CE8;&#xFF1A;&#x672C;&#x4F8B;&#x82E5;&#x4E0D;&#x52A0; -p &#x53C2;&#x6570;&#xFF0C;&#x4E14;&#x539F;&#x672C;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x4EA7;&#x751F;&#x9519;&#x8BEF;&#x3002;&#xFF09;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">mkdir</span> runtest2/test
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">mkdir: cannot create directory &#x2018;runtest2/test&#x2019;: No such <span class="token function">file</span> or directory
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">mkdir</span> -p runtest2/test
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ll runtest2/</span>
+total <span class="token number">4</span>
+drwxr-xr-x <span class="token number">2</span> root root <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:09 <span class="token builtin class-name">test</span>
+</pre><h2 class="mume-header" id="font-color0000ddpwd-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">pwd &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># pwd</span>
+/root
+</pre><h2 class="mume-header" id="font-color0000ddstat-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">stat &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">stat</span> cron_temp
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">  File: cron_temp
+  Size: <span class="token number">57274</span>           Blocks: <span class="token number">112</span>        IO Block: <span class="token number">4096</span>   regular <span class="token function">file</span>
+Device: fd02h/64770d    Inode: <span class="token number">392462</span>      Links: <span class="token number">1</span>
+Access: <span class="token punctuation">(</span>0763/-rwxrw--wx<span class="token punctuation">)</span>  Uid: <span class="token punctuation">(</span>    <span class="token number">0</span>/    root<span class="token punctuation">)</span>   Gid: <span class="token punctuation">(</span>    <span class="token number">0</span>/    root<span class="token punctuation">)</span>
+Access: <span class="token number">2023</span>-06-09 <span class="token number">10</span>:55:00.602382276 +0800
+Modify: <span class="token number">2023</span>-06-09 <span class="token number">10</span>:39:02.038353258 +0800
+Change: <span class="token number">2023</span>-06-09 <span class="token number">10</span>:39:02.038353258 +0800
+</pre><h2 class="mume-header" id="font-color0000ddls-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">ls &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ls</span>
+cron-20230528  cron-20230528.txt  cron_temp  dnf.librepo.log  log  runtest  runtest2  text.txt
+</pre><p>-a &#x663E;&#x793A;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x53CA;&#x76EE;&#x5F55; (. &#x5F00;&#x5934;&#x7684;&#x9690;&#x85CF;&#x6587;&#x4EF6;&#x4E5F;&#x4F1A;&#x5217;&#x51FA;)</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ls -a</span>
+<span class="token builtin class-name">.</span>              .bash_profile  cron-20230528.txt  log               runtest2  .viminfo
+<span class="token punctuation">..</span>             .bashrc        cron_temp          .pip              .ssh      .wget-hsts
+.bash_history  .config        .cshrc             .pydistutils.cfg  .tcshrc
+.bash_logout   cron-20230528  dnf.librepo.log    runtest           text.txt
+</pre><p>-l &#x4EE5;&#x957F;&#x683C;&#x5F0F;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x6743;&#x9650;&#x3001;&#x6240;&#x6709;&#x8005;&#x3001;&#x5927;&#x5C0F;&#x3001;&#x521B;&#x5EFA;&#x65F6;&#x95F4;&#x7B49;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ls -l</span>
+total <span class="token number">456</span>
+lrwxrwxrwx <span class="token number">1</span> root root     <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root  <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root  <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:19 cron_temp
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">333511</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 dnf.librepo.log
+drwxr-xr-x <span class="token number">9</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 log
+drwxr-xr-x <span class="token number">3</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:08 runtest
+drwxr-xr-x <span class="token number">3</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:09 runtest2
+-rw-r--r-- <span class="token number">1</span> root root      <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+</pre><p>-R &#x9012;&#x5F52;&#x663E;&#x793A;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x548C;&#x5B50;&#x76EE;&#x5F55;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ls -R</span>
+.:
+cron-20230528  cron-20230528.txt  cron_temp  dnf.librepo.log  log  runtest  runtest2  text.txt
+
+./log:
+anaconda               <span class="token function">cron</span>                          hawkey.log-20230528  maillog-20230528   secure-20230604
+audit                  cron-20230528                 hawkey.log-20230604  maillog-20230604   spooler
+boot.log               cron-20230604                 journal              messages           spooler-20230528
+boot.log-20230522      dnf.librepo.log               kdump.log            messages-20230528  spooler-20230604
+btmp                   dnf.log                       kern                 messages-20230604  tuned
+btmp-20230601          dnf.rpm.log                   kern-20230528        private            wtmp
+chrony                 ecsgo.log                     kern-20230604        sa
+cloud-init.log         ecs_network_optimization.log  lastlog              secure
+cloud-init-output.log  hawkey.log                    maillog              secure-20230528
+
+./log/anaconda:
+anaconda.log  dnf.librepo.log  ifcfg.log    ks-script-e9cefe1q.log  ks-script-_qixjqxp.log  program.log  syslog
+dbus.log      hawkey.log       journal.log  ks-script-nq7k7iit.log  packaging.log           storage.log
+
+./log/audit:
+audit.log
+
+./log/chrony:
+
+./log/journal:
+b6ab5170290e430b872c890ce386d1eb
+
+./log/journal/b6ab5170290e430b872c890ce386d1eb:
+system@00000000000000000000000000000000-0000000000000f21-0005f4a386cdfa09.journal  system.journal
+
+./log/private:
+
+./log/sa:
+sa01  sa04  sa07  sa21  sa24  sa27  sa30   sar02  sar05  sar08  sar23  sar26  sar29
+sa02  sa05  sa08  sa22  sa25  sa28  sa31   sar03  sar06  sar21  sar24  sar27  sar30
+sa03  sa06  sa09  sa23  sa26  sa29  sar01  sar04  sar07  sar22  sar25  sar28  sar31
+
+./log/tuned:
+tuned.log
+
+./runtest:
+<span class="token builtin class-name">test</span>
+
+./runtest/test:
+
+./runtest2:
+<span class="token builtin class-name">test</span>
+
+./runtest2/test:
+</pre><p>-lh &#x4EE5;&#x4EBA;&#x7C7B;&#x53EF;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x5927;&#x5C0F;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ls -lh</span>
+total 456K
+lrwxrwxrwx <span class="token number">1</span> root root   <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+-rw------- <span class="token number">2</span> root root  56K Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+-rwxrw--wx <span class="token number">1</span> root root  56K Jun  <span class="token number">9</span> <span class="token number">12</span>:19 cron_temp
+-rw-r--r-- <span class="token number">1</span> root root 326K Jun  <span class="token number">9</span> <span class="token number">10</span>:46 dnf.librepo.log
+drwxr-xr-x <span class="token number">9</span> root root <span class="token number">4</span>.0K Jun  <span class="token number">9</span> <span class="token number">10</span>:46 log
+drwxr-xr-x <span class="token number">3</span> root root <span class="token number">4</span>.0K Jun  <span class="token number">9</span> <span class="token number">12</span>:08 runtest
+drwxr-xr-x <span class="token number">3</span> root root <span class="token number">4</span>.0K Jun  <span class="token number">9</span> <span class="token number">12</span>:09 runtest2
+-rw-r--r-- <span class="token number">1</span> root root    <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+</pre><p>-t &#x6309;&#x7167;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x6392;&#x5E8F;&#x663E;&#x793A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># ls -lt</span>
+total <span class="token number">456</span>
+-rwxrw--wx <span class="token number">1</span> root root  <span class="token number">57274</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:19 cron_temp
+drwxr-xr-x <span class="token number">3</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:09 runtest2
+drwxr-xr-x <span class="token number">3</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">12</span>:08 runtest
+drwxr-xr-x <span class="token number">9</span> root root   <span class="token number">4096</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 log
+-rw-r--r-- <span class="token number">1</span> root root <span class="token number">333511</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:46 dnf.librepo.log
+-rw-r--r-- <span class="token number">1</span> root root      <span class="token number">0</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:41 text.txt
+-rw------- <span class="token number">2</span> root root  <span class="token number">56797</span> Jun  <span class="token number">9</span> <span class="token number">10</span>:39 cron-20230528.txt
+lrwxrwxrwx <span class="token number">1</span> root root     <span class="token number">22</span> Jun  <span class="token number">8</span> <span class="token number">20</span>:59 cron-20230528 -<span class="token operator">&gt;</span> /var/log/cron-20230528
+</pre><h1 class="mume-header" id="font-color006600%E7%BD%91%E7%BB%9C%E9%80%9A%E8%AE%AFfont"><font color="006600">&#x7F51;&#x7EDC;&#x901A;&#x8BAF;</font></h1>
+
+<h2 class="mume-header" id="font-color0000ddifconfig-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">ifconfig &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ifconfig</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">docker0: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">416</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="token operator">&gt;</span>  mtu <span class="token number">1500</span>
+        inet <span class="token number">172.17</span>.0.1  netmask <span class="token number">255.255</span>.0.0  broadcast <span class="token number">172.17</span>.255.255
+        inet6 fe80::42:efff:fede:c41d  prefixlen <span class="token number">64</span>  scopeid 0x2<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>link<span class="token operator">&gt;</span>
+        ether 02:42:ef:de:c4:1d  txqueuelen <span class="token number">0</span>  <span class="token punctuation">(</span>Ethernet<span class="token punctuation">)</span>
+        RX packets <span class="token number">81416</span>  bytes <span class="token number">60638221</span> <span class="token punctuation">(</span><span class="token number">57.8</span> MiB<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">91478</span>  bytes <span class="token number">113932560</span> <span class="token punctuation">(</span><span class="token number">108.6</span> MiB<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+eth0: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">416</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="token operator">&gt;</span>  mtu <span class="token number">1500</span>
+        inet <span class="token number">172.30</span>.41.94  netmask <span class="token number">255.255</span>.240.0  broadcast <span class="token number">172.30</span>.47.255
+        inet6 fe80::216:3eff:fe1c:b392  prefixlen <span class="token number">64</span>  scopeid 0x2<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>link<span class="token operator">&gt;</span>
+        ether 00:16:3e:1c:b3:92  txqueuelen <span class="token number">1000</span>  <span class="token punctuation">(</span>Ethernet<span class="token punctuation">)</span>
+        RX packets <span class="token number">1882794</span>  bytes <span class="token number">1291102558</span> <span class="token punctuation">(</span><span class="token number">1.2</span> GiB<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">1299485</span>  bytes <span class="token number">234830719</span> <span class="token punctuation">(</span><span class="token number">223.9</span> MiB<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+lo: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">7</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,LOOPBACK,RUNNING<span class="token operator">&gt;</span>  mtu <span class="token number">65536</span>
+        inet <span class="token number">127.0</span>.0.1  netmask <span class="token number">255.0</span>.0.0
+        inet6 ::1  prefixlen <span class="token number">128</span>  scopeid 0x1<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>host<span class="token operator">&gt;</span>
+        loop  txqueuelen <span class="token number">1000</span>  <span class="token punctuation">(</span>Local Loopback<span class="token punctuation">)</span>
+        RX packets <span class="token number">2</span>  bytes <span class="token number">140</span> <span class="token punctuation">(</span><span class="token number">140.0</span> B<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">2</span>  bytes <span class="token number">140</span> <span class="token punctuation">(</span><span class="token number">140.0</span> B<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+veth76e5ab0: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">416</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="token operator">&gt;</span>  mtu <span class="token number">1500</span>
+        inet6 fe80::b834:9dff:fedc:b4a5  prefixlen <span class="token number">64</span>  scopeid 0x2<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>link<span class="token operator">&gt;</span>
+        ether ba:34:9d:dc:b4:a5  txqueuelen <span class="token number">0</span>  <span class="token punctuation">(</span>Ethernet<span class="token punctuation">)</span>
+        RX packets <span class="token number">19570</span>  bytes <span class="token number">6032051</span> <span class="token punctuation">(</span><span class="token number">5.7</span> MiB<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">25823</span>  bytes <span class="token number">41324149</span> <span class="token punctuation">(</span><span class="token number">39.4</span> MiB<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+vethd9ef551: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">416</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="token operator">&gt;</span>  mtu <span class="token number">1500</span>
+        inet6 fe80::e060:77ff:fec4:93a0  prefixlen <span class="token number">64</span>  scopeid 0x2<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>link<span class="token operator">&gt;</span>
+        ether e2:60:77:c4:93:a0  txqueuelen <span class="token number">0</span>  <span class="token punctuation">(</span>Ethernet<span class="token punctuation">)</span>
+        RX packets <span class="token number">34749</span>  bytes <span class="token number">47631532</span> <span class="token punctuation">(</span><span class="token number">45.4</span> MiB<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">35076</span>  bytes <span class="token number">3687693</span> <span class="token punctuation">(</span><span class="token number">3.5</span> MiB<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+</pre><h2 class="mume-header" id="font-color0000ddnetstat-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">netstat &#x547D;&#x4EE4;</font></h2>
+
+<p>-a &#x6216; --all &#x663E;&#x793A;&#x6240;&#x6709;&#x8FDE;&#x7EBF;&#x4E2D;&#x7684;Socket</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">netstat</span> -a
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">Active Internet connections <span class="token punctuation">(</span>servers and established<span class="token punctuation">)</span>
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:37325           <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:sunrpc          <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:mountd          <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:ssh             <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:46719           <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:vcom-tunnel     <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:nfs             <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:cslistener      <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">0.0</span>.0.0:hostmon         <span class="token number">0.0</span>.0.0:*               LISTEN     
+tcp        <span class="token number">0</span>      <span class="token number">0</span> iZbp10iy3yejxoxq8qh:ssh <span class="token number">47.96</span>.60.212:esimport   ESTABLISHED
+tcp        <span class="token number">0</span>      <span class="token number">0</span> iZbp10iy3yejxoxq8:53572 <span class="token number">100.100</span>.45.106:https    TIME_WAIT  
+tcp        <span class="token number">0</span>      <span class="token number">0</span> iZbp10iy3yejxoxq8:60164 <span class="token number">100.100</span>.30.26:http      ESTABLISHED
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:sunrpc             <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:mountd             <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:39197              <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:vcom-tunnel        <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:nfs                <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:cslistener         <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:36553              <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN     
+tcp6       <span class="token number">0</span>      <span class="token number">0</span> <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:hostmon            <span class="token punctuation">[</span>::<span class="token punctuation">]</span>:*                  LISTEN  
+</pre><p>-n &#x6216; --numeric &#x76F4;&#x63A5;&#x4F7F;&#x7528;IP&#x5730;&#x5740;&#xFF0C;&#x800C;&#x4E0D;&#x901A;&#x8FC7;&#x57DF;&#x540D;&#x670D;&#x52A1;&#x5668;&#x3002;</p>
+<p>-t &#x6216; --tcp &#x663E;&#x793A;TCP&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x7684;&#x8FDE;&#x7EBF;&#x72B6;&#x51B5;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">netstat</span> -nt
+Active Internet connections <span class="token punctuation">(</span>w/o servers<span class="token punctuation">)</span>
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">172.30</span>.41.94:22         <span class="token number">47.96</span>.60.212:3564       ESTABLISHED
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">172.30</span>.41.94:60164      <span class="token number">100.100</span>.30.26:80        ESTABLISHED
+tcp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">172.30</span>.41.94:35928      <span class="token number">100.100</span>.45.106:443      TIME_WAIT
+</pre><p>-u &#x6216; --udp &#x663E;&#x793A;UDP&#x4F20;&#x8F93;&#x534F;&#x8BAE;&#x7684;&#x8FDE;&#x7EBF;&#x72B6;&#x51B5;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">netstat</span> -nu
+Active Internet connections <span class="token punctuation">(</span>w/o servers<span class="token punctuation">)</span>
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+udp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">172.30</span>.41.94:68         <span class="token number">172.30</span>.47.253:67        ESTABLISHED
+udp        <span class="token number">0</span>      <span class="token number">0</span> <span class="token number">172.30</span>.41.94:45569      <span class="token number">10.143</span>.33.49:123        ESTABLISHED
+</pre><h2 class="mume-header" id="font-color0000ddping-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">ping &#x547D;&#x4EE4;</font></h2>
+
+<p>-c &lt;&#x5B8C;&#x6210;&#x6B21;&#x6570;&gt; &#x8BBE;&#x7F6E;&#x5B8C;&#x6210;&#x8981;&#x6C42;&#x56DE;&#x5E94;&#x7684;&#x6B21;&#x6570;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ping</span> -c <span class="token number">3</span> www.baidu.com
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">PING www.a.shifen.com <span class="token punctuation">(</span><span class="token number">180.101</span>.50.188<span class="token punctuation">)</span> <span class="token number">56</span><span class="token punctuation">(</span><span class="token number">84</span><span class="token punctuation">)</span> bytes of data.
+<span class="token number">64</span> bytes from <span class="token number">180.101</span>.50.188 <span class="token punctuation">(</span><span class="token number">180.101</span>.50.188<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">1</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">18.0</span> ms
+<span class="token number">64</span> bytes from <span class="token number">180.101</span>.50.188 <span class="token punctuation">(</span><span class="token number">180.101</span>.50.188<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">2</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">18.0</span> ms
+<span class="token number">64</span> bytes from <span class="token number">180.101</span>.50.188 <span class="token punctuation">(</span><span class="token number">180.101</span>.50.188<span class="token punctuation">)</span>: <span class="token assign-left variable">icmp_seq</span><span class="token operator">=</span><span class="token number">3</span> <span class="token assign-left variable">ttl</span><span class="token operator">=</span><span class="token number">50</span> <span class="token assign-left variable">time</span><span class="token operator">=</span><span class="token number">18.0</span> ms
+
+--- www.a.shifen.com <span class="token function">ping</span> statistics ---
+<span class="token number">3</span> packets transmitted, <span class="token number">3</span> received, <span class="token number">0</span>% packet loss, <span class="token function">time</span> 2003ms
+rtt min/avg/max/mdev <span class="token operator">=</span> <span class="token number">18.010</span>/18.028/18.040/0.155 ms
+</pre><h2 class="mume-header" id="font-color0000ddtelnet-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">telnet &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x767B;&#x5F55;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># telnet www.baidu.com</span>
+Trying <span class="token number">180.101</span>.50.188<span class="token punctuation">..</span>.
+</pre><h1 class="mume-header" id="font-color006600%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86font"><font color="006600">&#x7CFB;&#x7EDF;&#x7BA1;&#x7406;</font></h1>
+
+<h2 class="mume-header" id="font-color0000dddate-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">date &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date</span>
+Fri Jun  <span class="token number">9</span> 01:00:51 PM CST <span class="token number">2023</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date &apos;+%D&apos;</span>
+06/09/23
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date &apos;+%x&apos;</span>
+06/09/2023
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date &apos;+%T&apos;</span>
+<span class="token number">13</span>:01:41
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date &apos;+%X&apos;</span>
+01:01:47 PM
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date +&apos;%F %X&apos;</span>
+<span class="token number">2023</span>-06-09 01:02:23 PM
+</pre><h2 class="mume-header" id="font-color0000ddexit-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">exit &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x9000;&#x51FA;&#x76EE;&#x524D;&#x7684;shell</p>
+<h2 class="mume-header" id="font-color0000ddsleep-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">sleep &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># date; sleep 3; date</span>
+Fri Jun  <span class="token number">9</span> 01:06:10 PM CST <span class="token number">2023</span>
+Fri Jun  <span class="token number">9</span> 01:06:13 PM CST <span class="token number">2023</span>
+</pre><h2 class="mume-header" id="font-color0000ddkill-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">kill &#x547D;&#x4EE4;</font></h2>
+
+<p>1 (HUP)&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x8FDB;&#x7A0B;&#x3002;<br>
+9 (KILL)&#xFF1A;&#x6740;&#x6B7B;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x3002;<br>
+15 (TERM)&#xFF1A;&#x6B63;&#x5E38;&#x505C;&#x6B62;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">kill</span> -9
+</pre><h2 class="mume-header" id="font-color0000ddps-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">ps &#x547D;&#x4EE4;</font></h2>
+
+<p>-aux &#x663E;&#x793A;&#x6240;&#x6709;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x4F7F;&#x7528;&#x8005;&#x7684;&#x8FDB;&#x7A0B;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ps</span> -aux <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">&quot;worker&quot;</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">root           <span class="token number">6</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   May21   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/0:0H-events_highpri<span class="token punctuation">]</span>
+root          <span class="token number">82</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   May21   <span class="token number">0</span>:07 <span class="token punctuation">[</span>kworker/0:1H-events_highpri<span class="token punctuation">]</span>
+root         <span class="token number">147</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   May21   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/u5:0-xprtiod<span class="token punctuation">]</span>
+root        <span class="token number">1070</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I<span class="token operator">&lt;</span>   May21   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/u5:1<span class="token punctuation">]</span>
+root      <span class="token number">144739</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">12</span>:34   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/0:1-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">145348</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">12</span>:51   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/0:2-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">145872</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">12</span>:56   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/u4:1-ext4-rsv-conversion<span class="token punctuation">]</span>
+root      <span class="token number">145892</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">12</span>:58   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/0:3-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">146246</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">13</span>:02   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/u4:2-ext4-rsv-conversion<span class="token punctuation">]</span>
+root      <span class="token number">146491</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">13</span>:07   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/0:0-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">146492</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span>      <span class="token number">0</span>     <span class="token number">0</span> ?        I    <span class="token number">13</span>:07   <span class="token number">0</span>:00 <span class="token punctuation">[</span>kworker/u4:0-events_unbound<span class="token punctuation">]</span>
+root      <span class="token number">146975</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">221528</span>   <span class="token number">864</span> pts/0    R+   <span class="token number">13</span>:10   <span class="token number">0</span>:00 <span class="token function">grep</span> --color<span class="token operator">=</span>auto worker
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">ps</span> -ef <span class="token operator">|</span> <span class="token function">grep</span> <span class="token string">&quot;worker&quot;</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">root           <span class="token number">6</span>       <span class="token number">2</span>  <span class="token number">0</span> May21 ?        00:00:00 <span class="token punctuation">[</span>kworker/0:0H-events_highpri<span class="token punctuation">]</span>
+root          <span class="token number">82</span>       <span class="token number">2</span>  <span class="token number">0</span> May21 ?        00:00:07 <span class="token punctuation">[</span>kworker/0:1H-events_highpri<span class="token punctuation">]</span>
+root         <span class="token number">147</span>       <span class="token number">2</span>  <span class="token number">0</span> May21 ?        00:00:00 <span class="token punctuation">[</span>kworker/u5:0-xprtiod<span class="token punctuation">]</span>
+root        <span class="token number">1070</span>       <span class="token number">2</span>  <span class="token number">0</span> May21 ?        00:00:00 <span class="token punctuation">[</span>kworker/u5:1<span class="token punctuation">]</span>
+root      <span class="token number">144739</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">12</span>:34 ?        00:00:00 <span class="token punctuation">[</span>kworker/0:1-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">145348</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">12</span>:51 ?        00:00:00 <span class="token punctuation">[</span>kworker/0:2-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">145872</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">12</span>:56 ?        00:00:00 <span class="token punctuation">[</span>kworker/u4:1-ext4-rsv-conversion<span class="token punctuation">]</span>
+root      <span class="token number">145892</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">12</span>:58 ?        00:00:00 <span class="token punctuation">[</span>kworker/0:3-events<span class="token punctuation">]</span>
+root      <span class="token number">146246</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">13</span>:02 ?        00:00:00 <span class="token punctuation">[</span>kworker/u4:2-ext4-rsv-conversion<span class="token punctuation">]</span>
+root      <span class="token number">146491</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">13</span>:07 ?        00:00:00 <span class="token punctuation">[</span>kworker/0:0-cgroup_pidlist_destroy<span class="token punctuation">]</span>
+root      <span class="token number">146492</span>       <span class="token number">2</span>  <span class="token number">0</span> <span class="token number">13</span>:07 ?        00:00:00 <span class="token punctuation">[</span>kworker/u4:0-events_unbound<span class="token punctuation">]</span>
+root      <span class="token number">147034</span>  <span class="token number">145785</span>  <span class="token number">0</span> <span class="token number">13</span>:10 pts/0    00:00:00 <span class="token function">grep</span> --color<span class="token operator">=</span>auto worker
+</pre><h2 class="mume-header" id="font-color0000ddreboot-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">reboot &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x91CD;&#x65B0;&#x542F;&#x52A8;</p>
+<h2 class="mume-header" id="font-color0000ddtop-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">top &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">top</span>
+</pre><h2 class="mume-header" id="font-color0000ddsudo-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">sudo &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">sudo</span>
+</pre><h2 class="mume-header" id="font-color0000ddshutdown-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">shutdown &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x7ACB;&#x5373;&#x5173;&#x673A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">shutdown</span> -h now
+</pre><p>&#x6307;&#x5B9A; 10 &#x5206;&#x949F;&#x540E;&#x5173;&#x673A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">shutdown</span> -h <span class="token number">10</span>
+</pre><p>&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x8BA1;&#x7B97;&#x673A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">shutdown</span> -r now
+</pre><h2 class="mume-header" id="font-color0000ddwho-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">who &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x663E;&#x793A;&#x7CFB;&#x7EDF;&#x4E2D;&#x6709;&#x54EA;&#x4E9B;&#x4F7F;&#x7528;&#x8005;&#x6B63;&#x5728;&#x4E0A;&#x9762;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">who</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">root     pts/0        <span class="token number">2023</span>-06-09 <span class="token number">13</span>:32 <span class="token punctuation">(</span><span class="token number">118.31</span>.243.37<span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">who</span> -l -H
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">NAME     LINE         TIME             IDLE          PID COMMENT
+LOGIN    ttyS0        <span class="token number">2023</span>-05-21 <span class="token number">12</span>:11              <span class="token number">1058</span> <span class="token assign-left variable">id</span><span class="token operator">=</span>tyS0
+LOGIN    tty1         <span class="token number">2023</span>-05-21 <span class="token number">12</span>:11              <span class="token number">1057</span> <span class="token assign-left variable">id</span><span class="token operator">=</span>tty1
+</pre><h2 class="mume-header" id="font-color0000ddsu-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">su &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">su</span>
+</pre><h2 class="mume-header" id="font-color0000ddfree-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">free &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">free</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">              total        used        <span class="token function">free</span>      shared  buff/cache   available
+Mem:        <span class="token number">2014428</span>      <span class="token number">737684</span>      <span class="token number">493664</span>        <span class="token number">2120</span>      <span class="token number">783080</span>     <span class="token number">1118924</span>
+Swap:             <span class="token number">0</span>           <span class="token number">0</span>           <span class="token number">0</span>
+</pre><p>&#x5468;&#x671F;&#x6027;&#x7684;&#x67E5;&#x8BE2;&#x5185;&#x5B58;&#x4F7F;&#x7528;&#x4FE1;&#x606F;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">free</span> -s <span class="token number">1</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell">              total        used        <span class="token function">free</span>      shared  buff/cache   available
+Mem:        <span class="token number">2014428</span>      <span class="token number">738112</span>      <span class="token number">493216</span>        <span class="token number">2120</span>      <span class="token number">783100</span>     <span class="token number">1118496</span>
+Swap:             <span class="token number">0</span>           <span class="token number">0</span>           <span class="token number">0</span>
+
+              total        used        <span class="token function">free</span>      shared  buff/cache   available
+Mem:        <span class="token number">2014428</span>      <span class="token number">738596</span>      <span class="token number">492696</span>        <span class="token number">2120</span>      <span class="token number">783136</span>     <span class="token number">1118008</span>
+Swap:             <span class="token number">0</span>           <span class="token number">0</span>           <span class="token number">0</span>
+</pre><h2 class="mume-header" id="font-color0000ddw-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">w &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x663E;&#x793A;&#x76EE;&#x524D;&#x767B;&#x5165;&#x7CFB;&#x7EDF;&#x7684;&#x7528;&#x6237;&#x4FE1;&#x606F;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">w
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token number">13</span>:39:03 up <span class="token number">19</span> days,  <span class="token number">1</span>:27,  <span class="token number">1</span> user,  load average: <span class="token number">0.19</span>, <span class="token number">0.24</span>, <span class="token number">0.13</span>
+<span class="token environment constant">USER</span>     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+root     pts/0    <span class="token number">118.31</span>.243.37    <span class="token number">13</span>:32    <span class="token number">0</span>.00s  <span class="token number">0</span>.05s  <span class="token number">0</span>.00s w
+</pre><h2 class="mume-header" id="font-color0000ddcu-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">cu &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x7528;&#x4E8E;&#x8FDE;&#x63A5;&#x53E6;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x4E3B;&#x673A;&#x3002;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">cu -c 0102377765
+</pre><h2 class="mume-header" id="font-color0000ddtelnet-%E5%91%BD%E4%BB%A4font-1"><font color="#0000dd">telnet &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x767B;&#x5F55;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell">telnet <span class="token number">192.168</span>.0.5 
+</pre><h1 class="mume-header" id="font-color006600%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AEfont"><font color="006600">&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;</font></h1>
+
+<h2 class="mume-header" id="font-color0000ddclock-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">clock &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell">clock
+</pre><h2 class="mume-header" id="font-color0000ddcrontab-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">crontab &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell">*    *    *    *    *
+-    -    -    -    -
+<span class="token operator">|</span>    <span class="token operator">|</span>    <span class="token operator">|</span>    <span class="token operator">|</span>    <span class="token operator">|</span>
+<span class="token operator">|</span>    <span class="token operator">|</span>    <span class="token operator">|</span>    <span class="token operator">|</span>    +----- &#x661F;&#x671F;&#x4E2D;&#x661F;&#x671F;&#x51E0; <span class="token punctuation">(</span><span class="token number">0</span> - <span class="token number">6</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>&#x661F;&#x671F;&#x5929; &#x4E3A;0<span class="token punctuation">)</span>
+<span class="token operator">|</span>    <span class="token operator">|</span>    <span class="token operator">|</span>    +---------- &#x6708;&#x4EFD; <span class="token punctuation">(</span><span class="token number">1</span> - <span class="token number">12</span><span class="token punctuation">)</span> 
+<span class="token operator">|</span>    <span class="token operator">|</span>    +--------------- &#x4E00;&#x4E2A;&#x6708;&#x4E2D;&#x7684;&#x7B2C;&#x51E0;&#x5929; <span class="token punctuation">(</span><span class="token number">1</span> - <span class="token number">31</span><span class="token punctuation">)</span>
+<span class="token operator">|</span>    +-------------------- &#x5C0F;&#x65F6; <span class="token punctuation">(</span><span class="token number">0</span> - <span class="token number">23</span><span class="token punctuation">)</span>
++------------------------- &#x5206;&#x949F; <span class="token punctuation">(</span><span class="token number">0</span> - <span class="token number">59</span><span class="token punctuation">)</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token number">0</span> <span class="token number">6</span>-12/3 * <span class="token number">12</span> * /usr/bin/backup
+</pre><h2 class="mume-header" id="font-color0000ddset-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">set &#x547D;&#x4EE4;</font></h2>
+
+<p>set &#x6307;&#x4EE4;&#x80FD;&#x8BBE;&#x7F6E;&#x6240;&#x4F7F;&#x7528;shell&#x7684;&#x6267;&#x884C;&#x65B9;&#x5F0F;&#xFF0C;&#x53EF;&#x4F9D;&#x7167;&#x4E0D;&#x540C;&#x7684;&#x9700;&#x6C42;&#x6765;&#x505A;&#x8BBE;&#x7F6E;&#x3002;</p>
+<h2 class="mume-header" id="font-color0000ddexport-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">export &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x8BBE;&#x7F6E;&#x6216;&#x663E;&#x793A;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token builtin class-name">export</span>
+</pre><pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">DBUS_SESSION_BUS_ADDRESS</span></span><span class="token operator">=</span><span class="token string">&quot;unix:path=/run/user/0/bus&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HISTCONTROL</span></span><span class="token operator">=</span><span class="token string">&quot;ignoredups&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HISTSIZE</span></span><span class="token operator">=</span><span class="token string">&quot;1000&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HOME</span></span><span class="token operator">=</span><span class="token string">&quot;/root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HOSTNAME</span></span><span class="token operator">=</span><span class="token string">&quot;iZbp10iy3yejxoxq8qhlpiZ&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LANG</span></span><span class="token operator">=</span><span class="token string">&quot;en_US.UTF-8&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LESSOPEN</span></span><span class="token operator">=</span><span class="token string">&quot;||/usr/bin/lesspipe.sh %s&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LOGNAME</span></span><span class="token operator">=</span><span class="token string">&quot;root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LS_COLORS</span></span><span class="token operator">=</span><span class="token string">&quot;rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">MAIL</span><span class="token operator">=</span><span class="token string">&quot;/var/spool/mail/root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token environment constant">OLDPWD</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">PWD</span></span><span class="token operator">=</span><span class="token string">&quot;/root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span><span class="token string">&quot;/bin/bash&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">SHLVL</span></span><span class="token operator">=</span><span class="token string">&quot;2&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">SSH_CLIENT</span><span class="token operator">=</span><span class="token string">&quot;118.31.243.37 58022 22&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">SSH_CONNECTION</span><span class="token operator">=</span><span class="token string">&quot;118.31.243.37 58022 172.30.41.94 22&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">SSH_TTY</span><span class="token operator">=</span><span class="token string">&quot;/dev/pts/0&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">S_COLORS</span><span class="token operator">=</span><span class="token string">&quot;auto&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">TERM</span></span><span class="token operator">=</span><span class="token string">&quot;xterm-256color&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">USER</span></span><span class="token operator">=</span><span class="token string">&quot;root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">XDG_RUNTIME_DIR</span></span><span class="token operator">=</span><span class="token string">&quot;/run/user/0&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">XDG_SESSION_ID</span></span><span class="token operator">=</span><span class="token string">&quot;1351&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">which_declare</span><span class="token operator">=</span><span class="token string">&quot;declare -f&quot;</span>
+<span class="token punctuation">[</span>root@iZbp10iy3yejxoxq8qhlpiZ ~<span class="token punctuation">]</span><span class="token comment"># export -p</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">DBUS_SESSION_BUS_ADDRESS</span></span><span class="token operator">=</span><span class="token string">&quot;unix:path=/run/user/0/bus&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HISTCONTROL</span></span><span class="token operator">=</span><span class="token string">&quot;ignoredups&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HISTSIZE</span></span><span class="token operator">=</span><span class="token string">&quot;1000&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HOME</span></span><span class="token operator">=</span><span class="token string">&quot;/root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">HOSTNAME</span></span><span class="token operator">=</span><span class="token string">&quot;iZbp10iy3yejxoxq8qhlpiZ&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LANG</span></span><span class="token operator">=</span><span class="token string">&quot;en_US.UTF-8&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LESSOPEN</span></span><span class="token operator">=</span><span class="token string">&quot;||/usr/bin/lesspipe.sh %s&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LOGNAME</span></span><span class="token operator">=</span><span class="token string">&quot;root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">LS_COLORS</span></span><span class="token operator">=</span><span class="token string">&quot;rs=0:di=38;5;33:ln=38;5;51:mh=00:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=01;05;37;41:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;40:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.zst=38;5;9:*.tzst=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.wim=38;5;9:*.swm=38;5;9:*.dwm=38;5;9:*.esd=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.mjpg=38;5;13:*.mjpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.m4a=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.oga=38;5;45:*.opus=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">MAIL</span><span class="token operator">=</span><span class="token string">&quot;/var/spool/mail/root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token environment constant">OLDPWD</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">PATH</span></span><span class="token operator">=</span><span class="token string">&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">PWD</span></span><span class="token operator">=</span><span class="token string">&quot;/root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">SHELL</span></span><span class="token operator">=</span><span class="token string">&quot;/bin/bash&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">SHLVL</span></span><span class="token operator">=</span><span class="token string">&quot;2&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">SSH_CLIENT</span><span class="token operator">=</span><span class="token string">&quot;118.31.243.37 58022 22&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">SSH_CONNECTION</span><span class="token operator">=</span><span class="token string">&quot;118.31.243.37 58022 172.30.41.94 22&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">SSH_TTY</span><span class="token operator">=</span><span class="token string">&quot;/dev/pts/0&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">S_COLORS</span><span class="token operator">=</span><span class="token string">&quot;auto&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">TERM</span></span><span class="token operator">=</span><span class="token string">&quot;xterm-256color&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">USER</span></span><span class="token operator">=</span><span class="token string">&quot;root&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">XDG_RUNTIME_DIR</span></span><span class="token operator">=</span><span class="token string">&quot;/run/user/0&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable"><span class="token environment constant">XDG_SESSION_ID</span></span><span class="token operator">=</span><span class="token string">&quot;1351&quot;</span>
+<span class="token builtin class-name">declare</span> -x <span class="token assign-left variable">which_declare</span><span class="token operator">=</span><span class="token string">&quot;declare -f&quot;</span>
+</pre><h2 class="mume-header" id="font-color0000ddenable-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">enable &#x547D;&#x4EE4;</font></h2>
+
+<p>&#x7528;&#x4E8E;&#x542F;&#x52A8;&#x6216;&#x5173;&#x95ED; shell &#x5185;&#x5EFA;&#x6307;&#x4EE4;</p>
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token builtin class-name">enable</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">.</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">:</span>
+<span class="token builtin class-name">enable</span> <span class="token punctuation">[</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">alias</span>
+<span class="token builtin class-name">enable</span> <span class="token function">bg</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">bind</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">break</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">builtin</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">caller</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">cd</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">command</span>
+<span class="token builtin class-name">enable</span> compgen
+<span class="token builtin class-name">enable</span> complete
+<span class="token builtin class-name">enable</span> compopt
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">continue</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">declare</span>
+<span class="token builtin class-name">enable</span> <span class="token function">dirs</span>
+<span class="token builtin class-name">enable</span> disown
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">echo</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">enable</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">eval</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">exec</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">exit</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">export</span>
+<span class="token builtin class-name">enable</span> <span class="token boolean">false</span>
+<span class="token builtin class-name">enable</span> fc
+<span class="token builtin class-name">enable</span> <span class="token function">fg</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">getopts</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">hash</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">help</span>
+<span class="token builtin class-name">enable</span> <span class="token function">history</span>
+<span class="token builtin class-name">enable</span> <span class="token function">jobs</span>
+<span class="token builtin class-name">enable</span> <span class="token function">kill</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">let</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">local</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">logout</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">mapfile</span>
+<span class="token builtin class-name">enable</span> <span class="token function">popd</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">printf</span>
+<span class="token builtin class-name">enable</span> <span class="token function">pushd</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">pwd</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">read</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">readarray</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">readonly</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">return</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">set</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">shift</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">shopt</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">source</span>
+<span class="token builtin class-name">enable</span> <span class="token function">suspend</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">test</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">times</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">trap</span>
+<span class="token builtin class-name">enable</span> <span class="token boolean">true</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">type</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">typeset</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">ulimit</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">umask</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">unalias</span>
+<span class="token builtin class-name">enable</span> <span class="token builtin class-name">unset</span>
+<span class="token builtin class-name">enable</span> <span class="token function">wait</span>
+</pre><h1 class="mume-header" id="font-color006600%E5%A4%87%E4%BB%BD%E5%8E%8B%E7%BC%A9font"><font color="006600">&#x5907;&#x4EFD;&#x538B;&#x7F29;</font></h1>
+
+<h2 class="mume-header" id="font-color0000ddzip-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">zip &#x547D;&#x4EE4;</font></h2>
+
+<h2 class="mume-header" id="font-color0000ddunzip-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">unzip &#x547D;&#x4EE4;</font></h2>
+
+<h2 class="mume-header" id="font-color0000ddtar-%E5%91%BD%E4%BB%A4font"><font color="#0000dd">tar &#x547D;&#x4EE4;</font></h2>
+
+<h1 class="mume-header" id="font-color006600%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4font"><font color="006600">&#x5176;&#x4ED6;&#x547D;&#x4EE4;</font></h1>
+
+<h2 class="mume-header" id="font-color0000ddtail-%E5%91%BD%E4%BB%A4font"><font color="0000dd">tail &#x547D;&#x4EE4;</font></h2>
+
+<pre data-role="codeBlock" data-info="shell" class="language-shell"><span class="token function">tail</span> -f cron_temp
+</pre>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
